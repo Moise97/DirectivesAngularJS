@@ -14,6 +14,16 @@
             <h3 class="panel-header">To Do List</h3>
 
             <div>There are {{dates.length}} items</div>
+
+            <div>There are <span ng-bind="dates.length"></span> items</div>
+
+            <div ng-bind-template=
+                "First: {{dates[0].action}}. Second: {{dates[1].action}}">
+            </div>
+
+            <div ng-non-bindable>
+                AngularJS uses {{ dates.length }} characters for templates 
+            </div>
         </div>
     </body>
 </html>
