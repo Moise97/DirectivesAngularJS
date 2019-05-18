@@ -11,19 +11,18 @@
     </head>
     <body>
         <div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+
             <h3 class="panel-header">To Do List</h3>
 
-            <div>There are {{dates.length}} items</div>
-
-            <div>There are <span ng-bind="dates.length"></span> items</div>
-
-            <div ng-bind-template=
-                "First: {{dates[0].action}}. Second: {{dates[1].action}}">
+            <div class="well">
+                <div>The first item is: {{dates[0].action}}</div>
             </div>
 
-            <div ng-non-bindable>
-                AngularJS uses {{ dates.length }} characters for templates 
+            <div class="form-group well">
+                <label for="firstItem">Set First Item:</label>
+                <input name="firstItem" class="form-control" ng-model="dates[0].action">
             </div>
+            
         </div>
     </body>
 </html>
