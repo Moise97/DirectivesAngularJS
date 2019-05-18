@@ -18,19 +18,7 @@
 
             <h3 class="panel-header">To Do List</h3>
 
-            <table class="table">
-                <tbody>
-                    <tr ng-repeat="item in dates">
-                        <td>This is item {{$index}}</td>
-                    </tr>
-                    <tr>
-                        <td>The action is: {{item.action}}</td>
-                    </tr>
-                    <tr ng-repeat-end>
-                        <td>Item {{$index}} is {{$item.complete ? "" : "not"}} complete</td>
-                    </tr>
-                </tbody>
-            </table>
+            <ng-include src="'app/views/table.html'"/></ng-include>
             
         </div>
     </body>
