@@ -5,5 +5,9 @@ angular.module("directiveApp",[])
             .then(function(result){
                 $scope.dates = result;
             })
+
+        $scope.viewFile = function(){
+            return $scope.showList ? "app/views/list.html" : "app/views/table.html";
+        }
     }
 ]);

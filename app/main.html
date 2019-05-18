@@ -18,7 +18,16 @@
 
             <h3 class="panel-header">To Do List</h3>
 
-            <ng-include src="'app/views/table.html'"/></ng-include>
+            <div class="well">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="showList">
+                        Use the list view
+                    </label>
+                </div>
+            </div>
+
+            <ng-include src="viewFile()"/></ng-include>
             
         </div>
     </body>
