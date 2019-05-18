@@ -8,6 +8,10 @@
 
         <script src="../app/controllers/defautController.js"></script>
         <script src="../app/services/dataService.js"></script>
+        <style>
+            .odd { background-color: lightcoral }
+            .even { background-color: lavenderblush }
+        </style>
     </head>
     <body>
         <div id="todoPanel" class="panel" ng-controller="defaultCtrl">
@@ -23,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="item in dates">
+                    <tr ng-repeat="item in dates" ng-class="$odd ? 'odd' : 'even' ">
                         <td>{{$index + 1}}</td>
                         <td ng-repeat="prop in item">{{prop}}</td>
                     </tr>
